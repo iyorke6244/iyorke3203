@@ -1,0 +1,22 @@
+<main>
+    <section>
+        <h2>References for Understanding Web Cookies</h2>
+        <ol>
+            <li>
+                <p><strong>MDN Web Docs - Cookies</strong></p>
+                <p>MDN provides an overview of web cookies, their types, and their uses.</p>
+                <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies" target="_blank">MDN Web Docs - Cookies</a></p>
+            </li>
+            <li>
+                <p><strong>Cookie Consent by Osano</strong></p>
+                <p>Information on cookie law compliance and privacy policies.</p>
+                <p><a href="https://www.osano.com/cookieconsent" target="_blank">Cookie Consent by Osano</a></p>
+            </li>
+            <li>
+                <p><strong>W3C - Cookies and Privacy</strong></p>
+                <p>Guidelines on cookies, privacy, and security concerns.</p>
+                <p><a href="https://www.w3.org/Privacy/Cookies/" target="_blank">W3C - Cookies and Privacy</a></p>
+            </li>
+        </ol>
+    </section>
+</main>
