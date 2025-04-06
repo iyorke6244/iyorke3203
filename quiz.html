@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Cookie Quiz</h1>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="types.html">Types of Cookies</a></li>
+        <li><a href="privacy-security.html">Privacy & Security</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <form id="quizForm">
+     
+      <!-- Question 1 -->
+      <h3>1. What is a cookie in web development?</h3>
+      <label><input type="radio" name="q1" value="a"> A type of JavaScript function</label><br>
+      <label><input type="radio" name="q1" value="b"> A small piece of data stored on the user's computer</label><br>
+      <label><input type="radio" name="q1" value="c"> An HTML tag</label><br><br>
+
+      <!-- Question 2 -->
+      <h3>2. Which of the following is a secure way to use cookies?</h3>
+      <label><input type="radio" name="q2" value="a"> Use cookies to store sensitive data in plain text</label><br>
+      <label><input type="radio" name="q2" value="b"> Use HTTP-only and Secure flags</label><br>
+      <label><input type="radio" name="q2" value="c"> Make cookies accessible to JavaScript</label><br><br>
+
+      <!-- Question 3 -->
+      <h3>3. Cookies are primarily used for:</h3>
+      <label><input type="radio" name="q3" value="a"> Styling webpages</label><br>
+      <label><input type="radio" name="q3" value="b"> User authentication and session tracking</label><br>
+      <label><input type="radio" name="q3" value="c"> Creating animations</label><br><br>
+
+      <!-- Question 4: Fill-in-the-blank -->
+      <h3>4. Fill in the blank: The ________ attribute restricts a cookie to a specific path or domain.</h3>
+      <input type="text" name="q4"><br><br>
+
+      <!-- Question 5: Multiple correct choices -->
+      <h3>5. Which of the following are common cookie attributes? (Select all that apply)</h3>
+      <label><input type="checkbox" name="q5" value="a"> expires</label><br>
+      <label><input type="checkbox" name="q5" value="b"> max-age</label><br>
+      <label><input type="checkbox" name="q5" value="c"> background-color</label><br>
+      <label><input type="checkbox" name="q5" value="d"> secure</label><br><br>
+
+      <button type="button" onclick="checkAnswers()">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+
+    <div id="results"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Understanding Web Cookies</p>
+  </footer>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
