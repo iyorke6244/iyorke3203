@@ -3,33 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Understanding Web Cookies🍪</title>
+    <title>Understanding Web Cookies</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Understanding Web Cookies🍪</h1>
+        <h1>Understanding Web Cookies</h1>
         <nav>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="types.html">Types of Cookies</a></li>
                 <li><a href="privacy-security.html">Privacy & Security</a></li>
                 <li><a href="references.html">References</a></li>
-                 <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
             </ul>
         </nav>
     </header>
     
     <main>
-        <section>
-            <h2>What are Web Cookies? </h2>
-            <p>Web cookies are small text files stored on a user's device by a web browser. They help websites remember user preferences, login details, and browsing activities.</p>
-            <h3>Key Terms</h3>
-            <ul>
-                <li><strong>Session Cookies:</strong> Temporary cookies that expire when the browser is closed.</li>
-                <li><strong>Persistent Cookies:</strong> Stored for a longer duration and used for remembering login details.</li>
-                <li><strong>Third-Party Cookies:</strong> Set by domains other than the website being visited, often for tracking purposes.</li>
-            </ul>
+        <!-- Introduction Section -->
+        <section class="intro">
+            <h2>What Are Cookies?</h2>
+            <p>Web cookies are small text files created by websites you visit. They store a variety of data, such as user preferences, session information, and tracking identifiers, on your browser.</p>
+            <img src="images/cookie-diagram.png" alt="Diagram showing cookie exchange between browser and server">
+        </section>
+        
+        <!-- How Cookies Work -->
+        <section class="how-it-works">
+            <h2>How Cookies Work</h2>
+            <p>When you visit a website, the server sends a <strong>Set-Cookie</strong> header in the HTTP response. Your browser stores this cookie and includes it in subsequent requests to the same server.</p>
+            <ol>
+                <li>Browser requests page from server.</li>
+                <li>Server responds with content and Set-Cookie header.</li>
+                <li>Browser stores cookie locally.</li>
+                <li>Browser sends cookie with future requests to server.</li>
+            </ol>
+            <img src="images/http-cycle.png" alt="HTTP request-response cycle with cookies">
+        </section>
+        
+        <!-- Use Cases -->
+        <section class="use-cases">
+            <h2>Common Use Cases</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="images/shopping-cart.png" alt="Shopping cart icon">
+                    <h3>Shopping Cart</h3>
+                    <p>Cookies remember the items you add to your cart as you browse the store.</p>
+                </div>
+                <div class="card">
+                    <img src="images/user-session.png" alt="User session icon">
+                    <h3>User Sessions</h3>
+                    <p>Cookies maintain login sessions, so you stay signed in across pages.</p>
+                </div>
+                <div class="card">
+                    <img src="images/tracking.png" alt="Tracking icon">
+                    <h3>Analytics & Tracking</h3>
+                    <p>Cookies help websites analyze user behavior to improve content and usability.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Consent & Regulations -->
+        <section class="regulations">
+            <h2>Consent and Regulations</h2>
+            <p>Due to privacy laws like <a href="https://gdpr-info.eu/" target="_blank">GDPR</a> and <a href="https://www.oag.ca.gov/privacy/ccpa" target="_blank">CCPA</a>, websites must inform users about cookie usage and obtain consent.</p>
+            <img src="images/cookie-consent.png" alt="Cookie consent banner example">
         </section>
     </main>
     
@@ -38,4 +76,3 @@
     </footer>
 </body>
 </html>
-
