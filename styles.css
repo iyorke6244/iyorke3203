@@ -68,3 +68,47 @@ img {
     max-width: 500px; /* Limit the maximum size */
     height: auto; /* Keep the aspect ratio intact */
 }
+
+/* Base (mobile-first) styles */
+
+/* Tablet and up */
+@media (min-width: 600px) {
+  .nav-menu {
+    display: flex;
+    justify-content: center;
+  }
+  .main-content {
+    margin: 10px;
+  }
+  .card-container {
+    display: flex;
+    gap: 1rem;
+  }
+  .card {
+    flex: 1;
+  }
+}
+
+/* Desktop and up */
+@media (min-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+  .nav-menu {
+    justify-content: flex-start;
+  }
+  .main-content {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .nav-menu li {
+    padding: 15px 30px;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+  .main-content {
+    max-width: 1200px;
+  }
+}
