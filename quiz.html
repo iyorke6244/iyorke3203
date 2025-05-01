@@ -1,94 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Security Quiz</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Quiz - Web Application Security</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="quiz.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Web Application Security</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="topic1.html">Subtopic 1</a>
-            <a href="topic2.html">Subtopic 2</a>
-            <a href="references.html">References</a>
-            <a href="quiz.html">Quiz</a>
-        </nav>
-    </header>
-    <main>
-        <h2>Self-Assessment Quiz</h2>
-        <form id="quizForm">
-            <div class="question">
-                <p>1. What does XSS stand for?</p>
-                <label><input type="radio" name="q1" value="a"> Cross-Site Scripting</label><br>
-                <label><input type="radio" name="q1" value="b"> External Site Security</label><br>
-                <label><input type="radio" name="q1" value="c"> Extra Secure System</label>
-            </div>
-            <div class="question">
-                <p>2. Which one is a common form of SQL Injection prevention?</p>
-                <label><input type="radio" name="q2" value="a"> HTML Escaping</label><br>
-                <label><input type="radio" name="q2" value="b"> Parameterized Queries</label><br>
-                <label><input type="radio" name="q2" value="c"> Input Storage</label>
-            </div>
-            <div class="question">
-                <p>3. What is CSRF?</p>
-                <label><input type="radio" name="q3" value="a"> Code Security and Reliable Function</label><br>
-                <label><input type="radio" name="q3" value="b"> Cross-Site Request Forgery</label><br>
-                <label><input type="radio" name="q3" value="c"> Crypto Site Reading Function</label>
-            </div>
-            <div class="question">
-                <p>4. Fill in the blank: Cookies can store _____ data for web sessions.</p>
-                <input type="text" name="q4">
-            </div>
-            <div class="question">
-                <p>5. Select all that are web application vulnerabilities:</p>
-                <label><input type="checkbox" name="q5" value="a"> SQL Injection</label><br>
-                <label><input type="checkbox" name="q5" value="b"> XSS</label><br>
-                <label><input type="checkbox" name="q5" value="c"> Strong Passwords</label><br>
-                <label><input type="checkbox" name="q5" value="d"> CSRF</label>
-            </div>
-            <button type="button" onclick="checkAnswers()">Submit</button>
-            <button type="button" onclick="resetQuiz()">Restart</button>
-        </form>
-        <div id="result"></div>
-    </main>
+  <header>
+    <h1>Web App Security Quiz</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="authentication.html">Authentication</a>
+      <a href="input-validation.html">Input Validation</a>
+      <a href="references.html">References</a>
+      <a href="quiz.html">Quiz</a>
+    </nav>
+  </header>
 
-    <script>
-        function checkAnswers() {
-            let score = 0;
-            const result = document.getElementById('result');
-            result.innerHTML = '';
+  <main>
+    <form id="quizForm">
+      <!-- Q1: Single choice -->
+      <div class="question">
+        <p>1. What is the main goal of input validation?</p>
+        <label><input type="radio" name="q1" value="a"> Make pages load faster</label><br>
+        <label><input type="radio" name="q1" value="b"> Protect against malicious input</label><br>
+        <label><input type="radio" name="q1" value="c"> Speed up form submission</label>
+      </div>
 
-            const q1 = document.querySelector('input[name="q1"]:checked');
-            if (q1 && q1.value === "a") score++;
+      <!-- Q2: Single choice -->
+      <div class="question">
+        <p>2. Which protocol is secure for transmitting sensitive information?</p>
+        <label><input type="radio" name="q2" value="a"> HTTP</label><br>
+        <label><input type="radio" name="q2" value="b"> FTP</label><br>
+        <label><input type="radio" name="q2" value="c"> HTTPS</label>
+      </div>
 
-            const q2 = document.querySelector('input[name="q2"]:checked');
-            if (q2 && q2.value === "b") score++;
+      <!-- Q3: Single choice -->
+      <div class="question">
+        <p>3. What is CSRF?</p>
+        <label><input type="radio" name="q3" value="a"> A cookie-setting method</label><br>
+        <label><input type="radio" name="q3" value="b"> A type of attack that forces users to execute unwanted actions</label><br>
+        <label><input type="radio" name="q3" value="c"> A network protocol</label>
+      </div>
 
-            const q3 = document.querySelector('input[name="q3"]:checked');
-            if (q3 && q3.value === "b") score++;
+      <!-- Q4: Fill in the blank -->
+      <div class="question">
+        <p>4. Fill in the blank: The process of confirming a user’s identity is called _______.</p>
+        <input type="text" name="q4">
+      </div>
 
-            const q4 = document.querySelector('input[name="q4"]').value.trim().toLowerCase();
-            if (q4 === "session" || q4 === "user") score++;
+      <!-- Q5: Multi-select -->
+      <div class="question">
+        <p>5. Select all security best practices:</p>
+        <label><input type="checkbox" name="q5" value="a"> Input validation</label><br>
+        <label><input type="checkbox" name="q5" value="b"> Storing passwords in plain text</label><br>
+        <label><input type="checkbox" name="q5" value="c"> Using HTTPS</label><br>
+        <label><input type="checkbox" name="q5" value="d"> Disabling authentication</label>
+      </div>
 
-            const q5 = Array.from(document.querySelectorAll('input[name="q5"]:checked')).map(cb => cb.value);
-            const correct_q5 = ["a", "b", "d"];
-            if (q5.length === correct_q5.length && q5.every(val => correct_q5.includes(val))) score++;
+      <br>
+      <button type="button" onclick="submitQuiz()">Submit</button>
+      <button type="reset">Restart</button>
+    </form>
 
-            result.innerHTML = `<p>Your score is ${score}/5</p>`;
-            result.innerHTML += `<p class="${score >= 3 ? "pass" : "fail"}">${score >= 3 ? "Pass" : "Fail"}</p>`;
-        }
-
-        function resetQuiz() {
-            document.getElementById("quizForm").reset();
-            document.getElementById("result").innerHTML = "";
-        }
-    </script>
-</body>
-</html>
-
-
-  <script src="quiz.js"></script>
+    <div id="result"></div>
+  </main>
 </body>
 </html>
