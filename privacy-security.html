@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy & Security</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Privacy & Security</h1>
+    </header>
+    
+    <nav>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="types_of_cookies.html">Types of Cookies</a></li>
+            <li><a href="privacy_security.html">Privacy & Security</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h2>Introduction to Privacy and Security Concerns</h2>
+        <p>Cookies, while offering numerous advantages in improving the user experience, also raise important privacy and security concerns. Understanding how cookies can be used to track user behavior, as well as the potential risks associated with improper cookie management, is crucial for both users and developers.</p>
+
+        <h3>Cookies and Tracking</h3>
+        <p>Cookies are commonly used for tracking purposes. They help websites collect valuable data about users’ browsing habits, interactions with the site, and behaviors across sessions. This information is typically used to personalize content, improve user experience, and serve targeted ads. However, this tracking can also be used to create detailed profiles about users, leading to potential privacy violations.</p>
+        <p><strong>Types of Tracking:</strong></p>
+        <ul>
+            <li><strong>Cross-Site Tracking:</strong> Third-party cookies track users across different websites.</li>
+            <li><strong>First-Party Tracking:</strong> First-party cookies track user behavior only within the website that set the cookie.</li>
+        </ul>
+        <p><strong>Impact on Privacy:</strong> Users may not realize the extent to which cookies track their behavior across websites, leading to privacy concerns.</p>
+
+        <h3>GDPR and Cookie Consent</h3>
+        <p>The <strong>General Data Protection Regulation (GDPR)</strong>, enacted by the European Union in 2018, introduced strict rules on cookie usage. It mandates that websites must obtain explicit consent from users before storing any cookies on their devices, except for strictly necessary cookies.</p>
+        <p><strong>Cookie Consent Banners:</strong> Under GDPR, most websites must display a cookie consent banner that informs users about the cookies being used and provides options to manage preferences.</p>
+        <p><strong>What Does This Mean for Users?</strong> Users now have more control over what data they share online. They can choose to accept all cookies, reject tracking cookies, or opt-out entirely from cookie storage.</p>
+
+        <h3>Cookie Security Risks</h3>
+        <p>Cookies, while generally safe, come with certain risks:</p>
+        <ul>
+            <li><strong>Session Hijacking:</strong> Attackers can steal session cookies to impersonate legitimate users and gain unauthorized access.</li>
+            <li><strong>Cross-Site Scripting (XSS) Attacks:</strong> Malicious scripts can access cookies if they are not marked as `HttpOnly`.</li>
+            <li><strong>Tracking Cookies:</strong> Third-party cookies allow for tracking across multiple websites, which can be invasive.</li>
+        </ul>
+
+        <h3>Best Practices for Cookie Security</h3>
+        <ul>
+            <li><strong>Use Secure Cookies:</strong> Set the `Secure` flag to ensure cookies are transmitted only over secure HTTPS connections.</li>
+            <li><strong>Implement SameSite Attribute:</strong> The `SameSite` attribute limits cookies to first-party contexts, preventing CSRF attacks.</li>
+            <li><strong>Set HttpOnly Flag:</strong> Mark sensitive cookies as `HttpOnly` to prevent access by JavaScript.</li>
+            <li><strong>Encrypt Sensitive Data:</strong> Sensitive cookie data should always be encrypted to prevent unauthorized access.</li>
+        </ul>
+
+        <h3>How Users Can Manage Cookies</h3>
+        <p>Most modern web browsers allow users to manage cookie preferences:</p>
+        <ul>
+            <li><strong>Google Chrome:</strong> Go to Settings > Privacy and Security > Cookies and other site data.</li>
+            <li><strong>Mozilla Firefox:</strong> Go to Options > Privacy & Security > Cookies and Site Data.</li>
+            <li><strong>Safari:</strong> Go to Preferences > Privacy to manage cookie settings.</li>
+        </ul>
+        <p>Users can block all cookies, accept only from the visited site, or enable cookie storage only for essential functionality.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Cookie Research Project</p>
+    </footer>
+</body>
+</html>
