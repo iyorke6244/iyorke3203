@@ -15,18 +15,20 @@ header {
     padding: 1rem 0;
 }
 
-/* Navigation styling */
 .nav-menu {
     display: flex;
-    justify-content: center;
+    justify-content: center; 
+    align-items: center;
     list-style: none;
     background-color: #444;
     padding: 0;
     margin: 0;
+    flex-wrap: wrap; /* Helps with responsiveness on smaller screens */
 }
 
 .nav-menu li {
     padding: 15px 20px;
+    text-align: center;
 }
 
 .nav-menu a {
@@ -34,12 +36,11 @@ header {
     color: white;
     font-size: 18px;
     transition: color 0.3s;
+    display: block;
 }
 
 .nav-menu a:hover {
     color: #f4a261;
-}
-
 /* Main content styling */
 main {
     max-width: 800px;
