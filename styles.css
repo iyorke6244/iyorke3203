@@ -1,8 +1,6 @@
 /* General styling */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-
 body {
-    font-family: Orbitron, sans-serif;
+    font-family: 'Orbitron', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
@@ -15,15 +13,16 @@ header {
     padding: 1rem 0;
 }
 
+/* Navigation styling */
 .nav-menu {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     list-style: none;
     background-color: #444;
     padding: 0;
     margin: 0;
-    flex-wrap: wrap; /* Helps with responsiveness on smaller screens */
+    flex-wrap: wrap;
 }
 
 .nav-menu li {
@@ -41,6 +40,8 @@ header {
 
 .nav-menu a:hover {
     color: #f4a261;
+}
+
 /* Main content styling */
 main {
     max-width: 800px;
@@ -64,52 +65,35 @@ footer {
     margin-top: 20px;
 }
 
+/* Responsive design */
+@media (max-width: 1024px) {
+    main {
+        padding: 15px;
+    }
+    .nav-menu {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-menu {
+        flex-direction: column;
+    }
+    .nav-menu li {
+        padding: 10px;
+    }
+    main {
+        padding: 10px;
+    }
+    h2, h3 {
+        font-size: 1.2rem;
+    }
+}
+
 img {
-    width: 80%; /* Resize the image to 80% of the container width */
-    max-width: 500px; /* Limit the maximum size */
-    height: auto; /* Keep the aspect ratio intact */
-}
-
-/* Base (mobile-first) styles */
-
-/* Tablet and up */
-@media (min-width: 600px) {
-  .nav-menu {
-    display: flex;
-    justify-content: center;
-  }
-  .main-content {
-    margin: 10px;
-  }
-  .card-container {
-    display: flex;
-    gap: 1rem;
-  }
-  .card {
-    flex: 1;
-  }
-}
-
-/* Desktop and up */
-@media (min-width: 1024px) {
-  body {
-    font-size: 16px;
-  }
-  .nav-menu {
-    justify-content: flex-start;
-  }
-  .main-content {
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  .nav-menu li {
-    padding: 15px 30px;
-  }
-}
-
-/* Large desktop */
-@media (min-width: 1200px) {
-  .main-content {
-    max-width: 1200px;
-  }
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
 }
